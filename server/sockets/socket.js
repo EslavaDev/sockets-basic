@@ -15,6 +15,7 @@ io.on('connection', (client) => {
   // Escuchar Cliente
   client.on('enviarMensaje', (data/* , callback */) => {
     console.log(data);
+    // mensajes broadcast
 
     client.broadcast.emit('enviarMensaje', data);
 
